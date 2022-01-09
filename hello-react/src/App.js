@@ -4,11 +4,13 @@ import './App.css';
 function App() {
   const name = 'suhyeon';
   return (
-    <>
-    <h1>React hello</h1>
-    <h2>Does it work well?</h2>
-    <p>my name is {name}</p>
-    </>
+    <div>
+      {name === 'suhyeon' ? (
+        <h1>suhyeon입니다.</h1>
+      ): (
+        <h2>suhyeon이 아닙니다.</h2>
+      )}
+  </div>
   );
 }
 
