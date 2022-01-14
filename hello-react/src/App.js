@@ -10,7 +10,10 @@ function App() {
     fontWeight: 'bold',
     padding: 16
   };
-  return <div style={style}>name</div>;
-
+  return (
+  <div style={style}>{name}
+  <h1>hello react</h1>
+  </div>
+  )
 }
 export default App;
