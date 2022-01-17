@@ -1,19 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MyComponent from "./MyComponent";
 
-function App() {
-  const name='리액트';
-  const style={
-    backgroundColor: 'black',
-    color: 'pink',
-    fontSize: '48px',
-    fontWeight: 'bold',
-    padding: 16
-  };
-  return (
-  <div style={style}>{name}
-  <h1>hello react</h1>
-  </div>
-  )
-}
+const App = () => {
+  return <MyComponent />;
+};
+
 export default App;
