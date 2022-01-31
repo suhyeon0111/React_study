@@ -3,12 +3,12 @@ import React, {Component} from "react";
 // import EventPractice from "./EventPractice";
 // import ValidationSample from "./ValidationSample";
 // import ScrollBox from "./ScrollBox";
-import IterationSample from "./IteraionSample";
-
+// import IterationSample from "./IteraionSample";
+import LifeCycleSample from "./LifeCycleSample";
 class App extends Component {
   render(){
     return (
-    <IterationSample/>
+    <LifeCycleSample/>
     )
   }
 }

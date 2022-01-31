@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{ useState } from 'react';
 
 const IterationSample = ()  => {
     const [names, setNames] = useState([
@@ -8,12 +8,12 @@ const IterationSample = ()  => {
         {id: 4, text: '겨울'}
     ])
     const [inputText, setInputText] = useState('');
-    const [naxtId, setNextId] = useState(5);
+    const [nextId, setNextId] = useState(5);
     
     const onChange = e => setInputText(e.target.value);
     const onClick = () => {
         const nextNames = names.concat({
-            id: setNextId,
+            id: nextId,
             text: inputText
         });
         setNextId(nextId + 1);
@@ -37,6 +37,6 @@ const IterationSample = ()  => {
     <ul>{namesList}</ul>
     </>
     );
-}
+};
 
 export default IterationSample;
