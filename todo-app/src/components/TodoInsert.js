@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { MdAdd } from 'react-icons/md';
 import './TodoInsert.scss';
 
@@ -8,12 +8,13 @@ const TodoInsert = () => {
   const onChange = useCallback((e) => {
     setValue(e.target.value);
   }, []);
+
   return (
     <form className="TodoInsert">
       <input
         placeholder="할 일을 입력하세요"
         value={value}
-        onChange={onChange}
+        onChange={onchange}
       />
       <button type="submit">
         <MdAdd />
