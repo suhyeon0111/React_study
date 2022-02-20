@@ -39,6 +39,7 @@ const App = () => {
     [todos],
   );
 
+  // 삭제 함수
   const onRemove = useCallback(
     (id) => {
       setTodos(todos.filter((todo) => todo.id !== id));
@@ -46,10 +47,22 @@ const App = () => {
     [todos],
   );
 
+  // 수정 함수
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+        ),
+      );
+    },
+    [todos],
+  );
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onRemove={onRemove} />
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   );
 };
