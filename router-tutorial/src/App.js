@@ -1,16 +1,14 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import About from "./About";
-import Home from "./Home";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import Home from "./components/Home";
 
 const App = () => {
   return (
-    <div>
-      {/* <Route path="/" component={Home} />
-      <Route path="/about" component={About} /> */}
-      <About />
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 };
 
