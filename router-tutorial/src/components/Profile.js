@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const data = {
   velopert: {
@@ -11,20 +12,31 @@ const data = {
   },
 };
 
-const Profile = ({ match }) => {
-  const { username } = match.params;
-  const profile = data[username];
-  if (!profile) {
-    return <div>존재하지 않는 사용자입니다.</div>;
-  }
+const Profile = () => {
+  const { id } = useParams();
+  const profile = data[id];
+
   return (
     <div>
       <h3>
-        {username}({profile.name})
+        {id}({profile.name})
       </h3>
       <p>{profile.description}</p>
     </div>
   );
+  // const { username } = match.params;
+  // const profile = data[username];
+  // if (!profile) {
+  //   return <div>존재하지 않는 사용자입니다.</div>;
+  // }
+  // return (
+  //   <div>
+  //     <h3>
+  //       {username}({profile.name})
+  //     </h3>
+  //     <p>{profile.description}</p>
+  //   </div>
+  // );
 };
 
 export default Profile;
