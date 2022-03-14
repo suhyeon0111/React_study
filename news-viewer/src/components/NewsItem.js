@@ -31,6 +31,7 @@ const NewsItemBlock = styled.div`
     margin-top: 3rem;
   }
 `;
+
 const NewsItem = ({ article }) => {
   const { title, description, url, urlToImage } = article;
   return (
